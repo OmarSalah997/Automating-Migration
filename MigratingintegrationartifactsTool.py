@@ -12,16 +12,15 @@ def read_text_file(file_path):
     
         # Get next line from file
         line = file1.readline()
-    
-        # if line is empty
-        # end of file is reached
         if not line:
             break
         if "<payloadFactory" in line :
+            #start searching in payloadfactory body
             count += 1
             line2=file1.readline()
-            while "<args"not in line2:
+            while "<args"not in line2: #keep searching until you reach <args> tag
                 if "$ctx:" in line2:
+                    #ctx found inside body and need to be changed
                     print("review file ",file_path," as it contains $ctx in a payloadfactory body in line: ",count)
                 line2=file1.readline()
                 count+=1
