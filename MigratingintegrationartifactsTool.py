@@ -41,7 +41,7 @@ for subfolderpath in subfolders:
             file_path = f"{userpath+basepath+subfolderpath}\{file}"
             # call read text file function
             read_text_file(file_path)
-   print("done checking folder: ",,subfolderpath)
+    print("done checking folder: ",,subfolderpath)
   
   
 
