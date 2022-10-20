@@ -34,9 +34,9 @@ def read_text_file(file_path):
 for subfolderpath in subfolders:
     print("checking folder: ",subfolderpath)
     os.chdir(userpath+basepath+subfolderpath)
-# iterate through all file
+# iterate through all files
     for file in os.listdir():
-        # Check whether file is in text format or not
+        # Check whether file is in xml format or not
         if file.endswith(".xml"):
             file_path = f"{userpath+basepath+subfolderpath}\{file}"
             # call read text file function
