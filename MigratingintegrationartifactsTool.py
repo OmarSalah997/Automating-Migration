@@ -23,7 +23,7 @@ def read_text_file(file_path):
                     #ctx found inside body and need to be changed
                     print("review file ",file_path," as it contains $ctx in a payloadfactory body in line: ",count)
                 line2=file1.readline()
-                count+=1
+                count+=1        
     file1.close()
 
 
@@ -41,7 +41,7 @@ for subfolderpath in subfolders:
             file_path = f"{userpath+basepath+subfolderpath}\{file}"
             # call read text file function
             read_text_file(file_path)
-   
+   print("done checking folder: ",,subfolderpath)
   
   
 
